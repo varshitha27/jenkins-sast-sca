@@ -9,12 +9,8 @@ pipeline {
 		sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=varshitha-27_samplecode -Dsonar.organization=varshitha-27 -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=9be7e0831cf6ea39cee51ea57031e5ea2a221bbb'
 			}
         } 
-<<<<<<< HEAD
-=======
   }
 }
-
->>>>>>> a08aaa6 (Update Jenkinsfile)
 	stage('RunSCAAnalysisUsingSnyk') {
             steps {		
 				withCredentials([string(credentialsId: 'SNYK_TOKEN', variable: 'SNYK_TOKEN')]) {
